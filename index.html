@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ovirekha - Social Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+            /* পেজের ব্যাকগ্রাউন্ডে ছবি */
+            background: #1e463a; 
+            background-image: url('https://github.com/easinahnaf9/ovirekha/raw/main/2.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+            
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            /* মাঝের কন্টেইনার সাদা রাখা হয়েছে (আপনার চাহিদা অনুযায়ী) */
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative; 
+            overflow: hidden; 
+        }
+        
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Arrow 1 এর জন্য কাভার ইমেজ */
+        .cover-image {
+            height: 120px; 
+            background-image: url('https://github.com/easinahnaf9/ovirekha/raw/main/2.jpg'); 
+            background-size: cover;
+            background-position: center;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin: -35px -35px 20px -35px; 
+            position: relative;
+        }
+        
+        .profile-header {
+            margin-bottom: 25px;
+        }
+        
+        .profile-img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px; 
+            margin-top: -80px; 
+            border: 4px solid #4a6bff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+        
+        h1 {
+            margin: 0 0 8px;
+            color: #222;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px; 
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: #fff;
+            color: #333;
+            padding: 16px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-btn:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: #4a6bff;
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .social-btn:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-icon {
+            margin-right: 15px;
+            font-size: 24px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .facebook { color: #1877f2; }
+        .telegram { color: #1da1f2; }
+        .gmail { color: #db4437; }
+        .whatsapp { color: #25D366; }
+        
+        footer {
+            /* সাদা আস্তরণ সরানো হয়েছে */
+            background-image: url('https://github.com/easinahnaf9/ovirekha/raw/main/2.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f0f0f0; 
+            
+            margin-top: 30px;
+            color: white; /* লেখা সাদা করা হয়েছে */
+            font-size: 15px;
+            border-top: none; 
+            padding-top: 25px; 
+            padding-bottom: 25px;
+            
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin-left: -35px; 
+            margin-right: -35px; 
+            margin-bottom: -35px; 
+        }
+        
+        .copyright {
+            margin-top: 10px; 
+            font-size: 12px;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+
+            .cover-image {
+                margin: -25px -20px 20px -20px;
+            }
+            
+            .profile-img {
+                width: 150px;
+                height: 150px;
+                margin-top: -60px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .social-btn {
+                padding: 14px 20px;
+            }
+
+            footer {
+                margin-left: -25px;
+                margin-right: -25px;
+                margin-bottom: -25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Arrow 1 এর জন্য কাভার ইমেজ -->
+        <div class="cover-image"></div> 
+
+        <div class="profile-header">
+            <!-- Arrow 2 এর কাছে প্রোফাইল ইমেজ -->
+            <img src="https://github.com/easinahnaf9/ovirekha/raw/main/FB_IMG_17659695459997419.jpg" alt="ovirekha" class="profile-img">
+            <h1>অভিরেখা</h1>
+    
+            <p class="description">কাগজে আঁকি স্বপ্ন রেখা🖌️</div>
+        
+        <div class="social-links">
+            <a href="https://www.facebook.com/ovirekha100" class="social-btn">
+                <i class="fab fa-facebook social-icon facebook"></i>
+                Facebook
+            </a>
+      
+            <a href="https://wa.me/8801632315913?text=Hello%20I%20am%20contacting%20you"
+               class="social-btn"
+               target="_blank"
+               rel="noopener">
+                <i class="fab fa-whatsapp social-icon whatsapp"></i>
+                WhatsApp
+            </a>
+            
+            <a href="https://t.me/atifovi" class="social-btn">
+                <i class="fab fa-telegram social-icon telegram"></i>
+                Telegram
+            </a>
+            <a href="mailto:ovirekha100@gmail.com" class="social-btn gmail-btn">
+                <i class="fab fa-google social-icon gmail"></i>
+                Gmail
+            </a>
+        </div>
+        
+        <!-- Footer-এ ব্যাকগ্রাউন্ড ছবি যোগ করা হয়েছে -->
+        <footer>
+            Connect with me on social media
+            <div class="copyright">© 2025 Ovirekha. All rights reserved.</div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.opacity = 1;
+        });
+        
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = 0;
+    </script>
+</body>
+</html>
